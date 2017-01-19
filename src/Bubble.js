@@ -104,7 +104,7 @@ export default class Bubble extends React.Component {
     }
     return null;
   }
-  
+
   onLongPress() {
     if (this.props.onLongPress) {
       this.props.onLongPress(this.context);
@@ -168,6 +168,23 @@ const styles = {
       marginRight: 60,
       minHeight: 20,
       justifyContent: 'flex-end',
+    },
+    containerToNext: {
+      borderBottomLeftRadius: 3,
+    },
+    containerToPrevious: {
+      borderTopLeftRadius: 3,
+    },
+  }),
+  center: StyleSheet.create({
+    container: {
+      flex: 1,
+      alignItems: 'center',
+    },
+    wrapper: {
+      borderRadius: 15,
+      minHeight: 20,
+      justifyContent: 'center',
     },
     containerToNext: {
       borderBottomLeftRadius: 3,
