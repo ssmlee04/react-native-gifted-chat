@@ -117,7 +117,7 @@ MessageText.defaultProps = {
 };
 
 MessageText.propTypes = {
-  position: React.PropTypes.oneOf(['left', 'right']),
+  position: React.PropTypes.oneOf(['left', 'right', 'center']),
   currentMessage: React.PropTypes.object,
   containerStyle: React.PropTypes.shape({
     left: View.propTypes.style,
