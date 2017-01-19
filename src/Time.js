@@ -41,6 +41,15 @@ const styles = {
       ...textStyle,
     },
   }),
+  center: StyleSheet.create({
+    container: {
+      ...containerStyle,
+    },
+    text: {
+      color: '#fff',
+      ...textStyle,
+    },
+  }),
   right: StyleSheet.create({
     container: {
       ...containerStyle,
@@ -70,10 +79,12 @@ Time.propTypes = {
   currentMessage: React.PropTypes.object,
   containerStyle: React.PropTypes.shape({
     left: View.propTypes.style,
+    center: View.propTypes.style,
     right: View.propTypes.style,
   }),
   textStyle: React.PropTypes.shape({
     left: Text.propTypes.style,
+    center: Text.propTypes.style,
     right: Text.propTypes.style,
   }),
 };
