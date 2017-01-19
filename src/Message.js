@@ -84,6 +84,13 @@ const styles = {
       marginRight: 0,
     },
   }),
+  center: StyleSheet.create({
+    container: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }
+  }),
   right: StyleSheet.create({
     container: {
       flexDirection: 'row',
@@ -111,7 +118,7 @@ Message.propTypes = {
   renderAvatar: React.PropTypes.func,
   renderBubble: React.PropTypes.func,
   renderDay: React.PropTypes.func,
-  position: React.PropTypes.oneOf(['left', 'right']),
+  position: React.PropTypes.oneOf(['left', 'right', 'center']),
   currentMessage: React.PropTypes.object,
   nextMessage: React.PropTypes.object,
   previousMessage: React.PropTypes.object,

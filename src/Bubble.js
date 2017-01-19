@@ -91,6 +91,20 @@ export default class Bubble extends React.Component {
     return null;
   }
 
+  renderMessageCustomView() {
+    if (this.props.currentMessage.view) {
+      var A = this.props.currentMessage.view
+      const {containerStyle, wrapperStyle, ...messageTextProps} = this.props;
+
+      if (this.props.currentMessage.viewProps) {
+        return <A {...this.props.currentMessage.viewProps}/>;
+      } else {
+        return <A />
+      }
+    }
+    return null;
+  }
+  
   onLongPress() {
     if (this.props.onLongPress) {
       this.props.onLongPress(this.context);
@@ -127,6 +141,7 @@ export default class Bubble extends React.Component {
           >
             <View>
               {this.renderCustomView()}
+              {this.renderMessageCustomView()}
               {this.renderMessageImage()}
               {this.renderMessageText()}
               <View style={styles.bottom}>
