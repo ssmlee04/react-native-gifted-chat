@@ -88,6 +88,18 @@ const styles = {
       textDecorationLine: 'underline',
     },
   }),
+  center: StyleSheet.create({
+    container: {
+    },
+    text: {
+      color: 'black',
+      ...textStyle,
+    },
+    link: {
+      color: 'black',
+      textDecorationLine: 'underline',
+    },
+  }),
   right: StyleSheet.create({
     container: {
     },
